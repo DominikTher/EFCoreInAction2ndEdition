@@ -1,0 +1,5 @@
+﻿Add Migration
+dotnet ef migrations add _ -o Migrations -p .\Persistence.csproj -s ..\..\Api\Api\Api.csproj
+
+Update Database
+dotnet ef database update -s ..\..\Api\Api\Api.csproj

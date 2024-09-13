@@ -1,0 +1,3 @@
+﻿Models for data access should be in Infrastructure and project should contains dtos
+Models for data access are placed in application layer for demo simplicity
+There is one potential advatage, with Models in Applicaton layer you can track EF Entities accross actions or requests (no disconnected)
