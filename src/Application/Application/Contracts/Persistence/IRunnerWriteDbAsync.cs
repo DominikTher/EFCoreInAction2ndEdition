@@ -7,6 +7,5 @@ public interface IRunnerWriteDbAsync<TIn, TOut>
 {
     IImmutableList<ValidationResult> Errors { get; }
     bool HasErrors { get; }
-
     Task<TOut> RunAction(TIn dataIn);
 }
