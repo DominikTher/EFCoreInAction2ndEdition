@@ -5,10 +5,14 @@ using Application.Core;
 
 namespace Application.Features.Orders;
 
+// TODO
+// There might be an Adapter design patter used if we want to return DTOs instead of persistence models
+// IPlaceOrderDbAccessAdapter returns DTOs, provide mapping and as a constructor argument accept IPlaceOrderDbAccess
 public sealed class PlaceOrderAction(IPlaceOrderDbAccess placeOrderDbAccess) : BizActionErrors, IBizAction<PlaceOrderInDto, Order>
 {
     public Order Action(PlaceOrderInDto placeOrderInDto)
     {
+        // TODO Remove check inside logic and put it into FluentValidation
         if (!placeOrderInDto.AcceptTAndCs)
         {
             AddError("You must accept the T&Cs to place an order.");

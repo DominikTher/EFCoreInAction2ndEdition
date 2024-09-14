@@ -18,6 +18,11 @@ public sealed class PlaceOrderRequestHandler(IRunnerWriteDbAsync<PlaceOrderInDto
 
         var order = await placeOrderAction.RunAction(placeOrderInDto);
 
+        if (placeOrderAction.HasErrors)
+        {
+            throw new ApplicationException(string.Join(",", placeOrderAction.Errors.Select(error => error.ErrorMessage)));
+        }
+
         return new PlaceOrderOutput();
     }
 }
