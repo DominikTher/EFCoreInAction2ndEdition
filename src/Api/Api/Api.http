@@ -8,3 +8,7 @@ GET {{Api_HostAddress}}/book?OrderBy=0&FilterBy=Title&FilterValue=networking&Pag
 GET {{Api_HostAddress}}/order
 
 ###
+
+GET {{Api_HostAddress}}/order/part-two
+
+###
