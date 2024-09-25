@@ -10,4 +10,4 @@ Notes
 - Global Query Filters (with database first)
 - Split Queries
 - Value Conversions (with database first)
-- Try all relationships, required, nullable, on-delete ... 
+- Try all relationships, required, nullable, on-delete, owned type and so on 
